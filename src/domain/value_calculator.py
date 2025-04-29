@@ -2,15 +2,15 @@ from models.value_response import ValueResponse
 
 def calculate_equipment_value(cost: float, market_ratio: float, auction_ratio: float) -> ValueResponse:
     """
-    Calcula os valores de mercado e leilão com base no custo e nas taxas.
+    Calculates the market and auction values based on the equipment cost and ratios.
 
     Args:
-        cost (float): Custo original do equipamento.
-        market_ratio (float): Fator de mercado para cálculo.
-        auction_ratio (float): Fator de leilão para cálculo.
+        cost (float): Original cost of the equipment.
+        market_ratio (float): Ratio used to calculate market value.
+        auction_ratio (float): Ratio used to calculate auction value.
 
     Returns:
-        ValueResponse: Resultado contendo marketValue e auctionValue.
+        ValueResponse: An object containing marketValue and auctionValue.
     """
     market_value = cost * market_ratio
     auction_value = cost * auction_ratio
